@@ -1,7 +1,7 @@
 NAME=sillythings
 
 CC = clang
-
+CXX= clang++
 CFLAGS += -pipe -O3 -std=c++0x 
 CFLAGS += -Wstrict-prototypes -Wold-style-definition -Wmissing-prototypes -Wnested-externs
 CFLAGS += -Wall -Wextra -pedantic

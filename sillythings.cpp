@@ -35,7 +35,7 @@ int main()
 		 // Clear screen
          App.Clear(sf::Color(200,0,0));
 	
-		 Sprite.setPosition(ship_x,ship_y);
+		 Sprite.SetPosition(ship_x,ship_y);
 		 // Draw the sprite
 		 App.Draw(Sprite);
 
