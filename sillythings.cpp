@@ -14,8 +14,14 @@ int main()
 		return EXIT_FAILURE;
 	sf::Sprite Sprite(Image);
 
+	unsigned int ship_x = 0;
+	unsigned int ship_y = 0;
+
 	while (App.IsOpened())
 	{
+
+		Sprite.setPosition(ship_x,ship_y);
+
 		 // Process events
 		 sf::Event Event;
 		 while (App.GetEvent(Event))
