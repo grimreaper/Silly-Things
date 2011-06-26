@@ -28,8 +28,24 @@ int main()
 			 // Close window : exit
 			 if (Event.Type == sf::Event::Closed)
 				 App.Close();
-			 if (Event.Type == sf::Event::KeyEvent)
-				 std::cout << "You cow, you pressed a button!\n"; 
+			 if (Event.Type == sf::Event::KeyPressed) {
+				 switch (Event.Key.Code) {
+					case sf::Key::Up:
+						break;
+					case sf::Key::Down:
+						if (5+Sprite.GetSize().y <= App.GetHeight()) {
+							Sprite.Move(0,5);
+							Sprite.SetX(100);
+						}
+						break;
+					case sf::Key::Right:
+						break;
+					case sf::Key::Left:
+						break;
+					default: 
+						std::cout << "You cow, you pressed a button!\n";
+				 }
+			 }
 		 }
 
 		 // Clear screen
