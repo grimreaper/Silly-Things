@@ -20,7 +20,6 @@ int main()
 	while (App.IsOpened())
 	{
 
-		Sprite.setPosition(ship_x,ship_y);
 
 		 // Process events
 		 sf::Event Event;
@@ -29,11 +28,14 @@ int main()
 			 // Close window : exit
 			 if (Event.Type == sf::Event::Closed)
 				 App.Close();
+			 if (Event.Type == sf::Event::KeyEvent)
+				 std::cout << "You cow, you pressed a button!\n"; 
 		 }
 
 		 // Clear screen
          App.Clear(sf::Color(200,0,0));
-
+	
+		 Sprite.setPosition(ship_x,ship_y);
 		 // Draw the sprite
 		 App.Draw(Sprite);
 
